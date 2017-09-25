@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerControllerViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-qz-Njs">
+                    <rect key="frame" x="0.0" y="684" width="414" height="52"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入商品条码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-AB-hMa">
+                            <rect key="frame" x="45" y="5.6666666666666288" width="291" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="9ve-WR-hUn"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="5Mf-sD-Fdw"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzl-Vg-rC0">
+                            <rect key="frame" x="344" y="5.6666666666666288" width="65" height="41"/>
+                            <color key="backgroundColor" red="1" green="0.12447967259999999" blue="0.0083926505969999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="3bN-vp-05T"/>
+                                <constraint firstAttribute="width" constant="65" id="dKP-AI-9OK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                            <state key="normal" title="查找">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="find:" destination="-1" eventType="touchDown" id="YW0-Yl-bK7"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanAssets.bundle/edit.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVy-hQ-ZDb">
+                            <rect key="frame" x="5" y="10" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="eQL-Mm-uO6"/>
+                                <constraint firstAttribute="height" constant="32" id="mfB-HH-BLq"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="zeQ-AB-hMa" firstAttribute="centerY" secondItem="2Zr-qz-Njs" secondAttribute="centerY" id="1V4-De-3Tl"/>
+                        <constraint firstItem="Hzl-Vg-rC0" firstAttribute="trailing" secondItem="2Zr-qz-Njs" secondAttribute="trailing" constant="-5" id="3cG-Pz-MEc"/>
+                        <constraint firstItem="Hzl-Vg-rC0" firstAttribute="leading" secondItem="zeQ-AB-hMa" secondAttribute="trailing" constant="8" id="CNd-KN-W83"/>
+                        <constraint firstItem="Hzl-Vg-rC0" firstAttribute="centerY" secondItem="2Zr-qz-Njs" secondAttribute="centerY" id="CcQ-yF-4Qa"/>
+                        <constraint firstAttribute="height" constant="52" id="K7A-yQ-Phn"/>
+                        <constraint firstItem="zeQ-AB-hMa" firstAttribute="leading" secondItem="eVy-hQ-ZDb" secondAttribute="trailing" constant="8" id="NJB-Gs-Rmv"/>
+                        <constraint firstItem="eVy-hQ-ZDb" firstAttribute="leading" secondItem="2Zr-qz-Njs" secondAttribute="leading" constant="5" id="m8A-Eg-AQD"/>
+                        <constraint firstItem="eVy-hQ-ZDb" firstAttribute="centerY" secondItem="2Zr-qz-Njs" secondAttribute="centerY" id="vCR-qd-cDt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujP-UD-4u2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                    <color key="backgroundColor" red="0.27882274985313416" green="0.2842867374420166" blue="0.31038379669189453" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="aKs-5O-01J"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ujP-UD-4u2" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Gd8-rH-orO"/>
+                <constraint firstItem="ujP-UD-4u2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MNp-pQ-iEv"/>
+                <constraint firstAttribute="trailing" secondItem="2Zr-qz-Njs" secondAttribute="trailing" id="Xw4-KZ-Bfl"/>
+                <constraint firstItem="ujP-UD-4u2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YwM-0i-trV"/>
+                <constraint firstItem="2Zr-qz-Njs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZMx-4T-ELj"/>
+                <constraint firstItem="2Zr-qz-Njs" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="seq-cR-7zC"/>
+            </constraints>
+            <point key="canvasLocation" x="-463.5" y="-876.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scanAssets.bundle/edit.png" width="16" height="16"/>
+    </resources>
+</document>
